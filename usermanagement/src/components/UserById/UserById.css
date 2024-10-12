@@ -1,0 +1,45 @@
+/* UserById.css */
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-card {
+  background-color: #f8f9fa; /* Light background for the card */
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid #dee2e6; /* Light border */
+  transition: transform 0.3s; /* Smooth scaling */
+}
+
+.user-card:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.card-header {
+  background-color: #007bff; /* Primary color for header */
+  color: white; /* Text color */
+  border-top-left-radius: 8px; /* Rounded corners */
+  border-top-right-radius: 8px; /* Rounded corners */
+}
+
+.user-detail {
+  font-size: 1.1rem; /* Increased font size */
+  margin: 10px 0; /* Space between details */
+}
+
+.info-icon {
+  margin-right: 8px; /* Space between icon and text */
+  color: #007bff; /* Color for icons */
+  font-size: 1.3rem; /* Increased icon size */
+}

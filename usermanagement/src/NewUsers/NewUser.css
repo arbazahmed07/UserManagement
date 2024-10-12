@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.image-container {
+  background-color: #f5f5f5; /* Light background for the image side */
+  position: relative;
+  overflow: hidden; /* Ensures the image doesn't overflow */
+  height: 100vh; /* Full height on larger screens */
+}
+
+.image-container img {
+  width: 100%; /* Ensure the image fills the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the area without distortion */
+  animation: zoomIn 1s; /* Animation for image on load */
+}
+
+.form-container {
+  background-color: white; /* Background for the form */
+  animation: fadeIn 1s; /* Animation for form on load */
+  padding: 20px; /* Add some padding for better spacing */
+  border-radius: 15px; /* Rounded corners for the form */
+  height: auto; /* Adjust height automatically */
+}
+
+.form-box {
+  width: 100%; /* Full width */
+}
+
+/* Form group styling */
+.form-group {
+  position: relative;
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+.form-group i {
+  color: #28a745; /* Change icon color to match the theme */
+  font-size: 1.2rem; /* Adjust icon size */
+  position: absolute; /* Keep the icon positioned */
+  left: 10px; /* Space from the left */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust position */
+  pointer-events: none; /* Prevent clicking on the icon */
+}
+
+.form-control {
+  padding-left: 40px; /* Add padding to the left to avoid overlap with icons */
+  border-radius: 5px; /* Rounded corners for input fields */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+/* Animation for input fields when focused */
+input:focus, textarea:focus {
+  border-color: #28a745; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  transition: all 0.3s; /* Smooth transition */
+}
+
+/* Button styling */
+.btn-success {
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.btn-success:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Adding animations using Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Styling */
+
+/* Small Devices (Max Width: 576px) */
+@media (max-width: 576px) {
+  .container-fluid {
+    flex-direction: column; /* Stack image and form vertically */
+  }
+
+  .image-container {
+    height: 50vh; /* Reduce image container height */
+  }
+
+  .form-container {
+    height: 50vh; /* Reduce form container height */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Medium Devices (Max Width: 768px) */
+@media (max-width: 768px) {
+  .container-fluid {
+    flex-direction: column; /* Stack image and form vertically */
+  }
+
+  .image-container {
+    height: 50vh; /* Reduce image container height */
+  }
+
+  .form-container {
+    height: auto; /* Adjust form height to fit content */
+    padding: 20px;
+  }
+
+  .form-box {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+}
+
+/* Large Devices (Min Width: 992px) */
+@media (min-width: 992px) {
+  .container-fluid {
+    flex-direction: row; /* Image and form side by side */
+  }
+
+  .image-container {
+    height: 100vh; /* Full height for large screens */
+  }
+
+  .form-container {
+    height: 100vh; /* Full height for large screens */
+    padding: 30px; /* Add more padding for larger screens */
+  }
+
+  .form-box {
+    padding: 20px; /* Add padding for larger screens */
+  }
+}

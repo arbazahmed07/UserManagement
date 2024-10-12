@@ -1,0 +1,76 @@
+/* Fade-in effect for the form container */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Shake effect for error inputs */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20%, 60% {
+    transform: translateX(-10px);
+  }
+  40%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+/* Add bounce effect to button click */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* General fade-in and slide-up for form container */
+.form-container {
+  animation: fadeIn 1s ease-in-out, slideUp 1s ease-in-out;
+}
+
+/* Smooth focus transition for inputs */
+.form-group input:focus, .form-group textarea:focus {
+  border-color: #28a745;
+  box-shadow: 0px 0px 10px rgba(40, 167, 69, 0.7);
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Shake effect for invalid inputs */
+.is-invalid {
+  animation: shake 0.5s;
+}
+
+/* Bounce effect on button click */
+.btn-success:active {
+  animation: bounce 0.3s;
+}
+
+/* Button hover effects */
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
