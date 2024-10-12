@@ -6,7 +6,7 @@ const mc=require("mongodb").MongoClient
 app.use(exp.static(path.join(__dirname,"../usermanagement/dist")))
 app.use(exp.json())
 
-//connecting mongodb
+//connecting mongodb()
 mc.connect("mongodb://localhost:27017")
 .then(client=>{
   const dbObj=client.db("usermng")
